@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. This Text Proves I'm now deploying through benastalk successfully!
+          Edit <code>src/App.js</code> and save to reload. This Text Proves I'm now deploying through beanstalk successfully!
         </p>
         <a
           className="App-link"
