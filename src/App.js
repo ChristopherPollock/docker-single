@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. This text proves I can edit the site live and it will be reflected in the container in real-time when hosted on my local dev machine.
+          Edit <code>src/App.js</code> and save to reload. This Text Proves I'm now deploying through benastalk successfully!
         </p>
         <a
           className="App-link"
