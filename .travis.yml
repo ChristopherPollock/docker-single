@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t manicman/docker-docker-frontend-v2 -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true manicman/docker-docker-frontend-v2 npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-frontend-v2"
+  env: "Docker-frontend-v2-env"
+  bucket_name: "elasticbeanstalk-us-east-1-777108062635"
+  bucket_path: "docker-frontend-v2"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
