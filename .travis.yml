@@ -3,18 +3,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t manicman/docker-frontend-v2 -f Dockerfile.dev .
+  - docker build -t manicman/frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true manicman/docker-frontend-v2 npm run test
+  - docker run -e CI=true manicman/frontend npm run test
 
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "docker-frontend-v2"
-  env: "Frontend-Prod"
+  app: "docker-single"
+  env: "SockerSingle-Prod"
   bucket_name: "elasticbeanstalk-us-east-1-777108062635"
-  bucket_path: "docker-frontend-v2"
+  bucket_path: "docker-single"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
