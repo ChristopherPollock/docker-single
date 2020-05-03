@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "docker-single"
-  env: "SockerSingle-Prod"
+  env: "DockerSingle-Prod"
   bucket_name: "elasticbeanstalk-us-east-1-777108062635"
   bucket_path: "docker-single"
   on:
